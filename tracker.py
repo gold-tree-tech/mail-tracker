@@ -55,5 +55,6 @@ def track():
     return response
 
 if __name__ == "__main__":
-    # run in debug for testing; use a production server (gunicorn) for production
-    app.run(host="0.0.0.0", port=5000)
+    # For local development/testing only
+    # In production, use: python run_server.py (Waitress WSGI server)
+    app.run(host="0.0.0.0", port=5000, debug=False)

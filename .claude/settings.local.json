@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(timeout 3 bash -c \"echo Waiting...\")",
+      "Bash(curl -X POST \"http://localhost:8000/api/v1/businesses\" -H \"Content-Type: application/json\" -d \"{\"\"search_query\"\": \"\"dentist Madrid\"\"}\")",
+      "Bash(timeout 10 bash -c \"echo Waiting for worker to process...\")",
+      "Bash(python:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
